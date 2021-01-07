@@ -1,0 +1,2 @@
+# Helix-Chatbot
+An intelligent chatbot that records a patient’s headache and medication is taken for it. Initially populated the database with given data. Then, created web portals for users and administrators. Users can see their history (past headaches) in the form of visualizations (bar graphs, pie charts, line graphs). Admins will have the right to access admin privileges to users and also, able to suspend any user account. Chatbot number: +12133206603 
