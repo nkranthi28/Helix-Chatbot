@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+       <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2>{{ title }}</h2>
+	    <h4>Active Users</h4>
+
+            <form action="/displayuser" method="post">
+
+                   {% for member in members: %}
+	           <input type="radio" name="patients" value="{{ member}}" /> {{ member }} <br>
+    	           {% endfor %}
+
+                 <input type="submit" value="Display User">
+            </form>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <p> </p>
+            <form action="/displaysettings" method="post">
+	           <!--<input type="buttom" name="settings" value="setting" /><br>-->
+    	          <!--<button type="button" name="settings" value="setting">view user settings</button>-->
+                    <!--<input type="submit" value="Display User">-->
+                    <button type="submit" name="settings" value="settings">view user settings</button>
+            </form>
+            <form>
+  <input type="button" value="Go back!" onclick="history.go(-1)">
+</form>
+
+    </body>
+</html>
