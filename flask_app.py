@@ -13,8 +13,8 @@ from twilio.http.http_client import TwilioHttpClient
 # from google.api_core.exceptions import InvalidArgument
 
 # Twilio account info
-account_sid = "ACb1c56d3d96d5dab05f568c9a8f22348b"
-auth_token = "7871d8c4fe70360f59d66c30bdd6fde3"
+account_sid = "******"
+auth_token = "*******"
 account_num = "+12133206603"
 
 user_name = ""
@@ -30,7 +30,7 @@ import mysql.connector
 mydb = mysql.connector.connect(
   host="knuthala.mysql.pythonanywhere-services.com",
   user="knuthala",
-  passwd="Ch21tanya0295@2019",
+  passwd="*******",
   database="knuthala$default"
 )
 
