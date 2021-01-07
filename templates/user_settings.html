@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<title>{{ title }}</title>
+</head>
+<body>
+    <h1>User Settings Details</h1>
+	<h2>{{ title }}</h2>
+	<h4>All Users</h4>
+	<form action="/user_activity" method="post">
+
+                   {% for member in members: %}
+	           <input type="radio" name="user" value="{{ member}}" /> {{ member }} <br>
+    	           {% endfor %}
+
+                 <input type="submit" value="Update User">
+            </form>
+            <form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+    </body>
+</html>
