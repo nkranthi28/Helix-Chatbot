@@ -1,0 +1,28 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+       <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2>{{ title }}</h2>
+
+            <form action="/visualize_Jane" method="post">
+
+
+	           <input type="radio" name="parameter" value="Severity" />
+	           <label for="Severity">Severity</label><br>
+	           <input type="radio" name="parameter" value="Time" />
+	           <label for="Time">Time</label><br>
+	           <input type="radio" name="parameter" value="Wokeup" />
+	           <label for="Wokeup">Wokeup</label><br>
+	           <input type="radio" name="parameter" value="Duration" />
+	           <label for="Duration">Duration</label><br>
+                <p></p>
+                 <input type="submit" value="Visualize">
+            </form>
+            <form>
+            <input type="button" value="Go back!" onclick="history.go(-1)">
+        </form>
+
+    </body>
+</html>
