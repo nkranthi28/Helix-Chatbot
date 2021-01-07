@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>John: Medication Details</h1>
+
+<table>
+  <tr>
+    <th>m_id</th>
+    <th>Medication_name</th>
+    <th>Pills</th>
+    <th>Prior_medication_severity</th>
+  </tr>
+
+    {% for item in medication %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+<form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+    </body>
+</html>
