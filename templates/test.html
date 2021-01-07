@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title> Plot</title>
+    <body>
+    <!--<body style="background-image: url('/static/bg.png')">-->
+        <div class="row">
+            <div class="column">
+                <img src="data:image/png;base64, {{ plot_url }}">
+            </div>
+            <p></p>
+            <p></p>
+            <div class="column">
+                <img src="data:image/png;base64, {{ plot_url1 }}">
+            </div>
+    </div>
+    <p></p>
+    <p></p>
+    <!--<form>-->
+    <!--    <input type="button" value="Go back!" onclick="history.back()">-->
+    <!--</form>-->
+    <form>
+  <input type="button" value="Go back!" onclick="history.go(-1)">
+</form>
+</body>
+</html>
