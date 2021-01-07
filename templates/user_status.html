@@ -1,0 +1,24 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+       <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2>{{ title }}</h2>
+
+            <form action="/end" method="post">
+
+
+	           <input type="radio" name="state" value="Activate" />
+	           <label for="Activate">Activate</label><br>
+	           <input type="radio" name="state" value="Suspend" />
+	           <label for="Suspend">Suspend</label><br>
+
+                 <input type="submit" value="Submit">
+            </form>
+            <form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+    </body>
+</html>
