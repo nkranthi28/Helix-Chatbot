@@ -1,0 +1,23 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+       <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2>{{ title }}</h2>
+
+            <form action="/finish_access" method="post">
+
+                <input type="radio" name="rights" value="Admin" />
+	           <label for="admin">Admin</label><br>
+	           <input type="radio" name="rights" value="User" />
+	           <label for="user">User</label><br>
+
+                 <input type="submit" value="Submit">
+            </form>
+            <form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+    </body>
+</html>
