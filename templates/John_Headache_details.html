@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>Headache details</h1>
+
+<table>
+  <tr>
+    <th>h_id</th>
+    <th>Wokeupwith</th>
+    <th>Duration</th>
+    <th>Severity</th>
+    <th>Num_times</th>
+    <th>Facility</th>
+    <th>M_cycle</th>
+  </tr>
+
+    {% for item in rows %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+    <p> </p>
+    <form action="/displayinfo" method="post">
+    <input type="radio" name="view" value="View Questions and Responses"/>
+    <label for="View Questions and Responses">View Questions and Responses</label><br>
+    <p> </p>
+    <input type="radio" name="view" value="View Medication Details"/>
+    <label for="View Medication Details">View Medication Details</label><br>
+    <p> </p>
+    <input type="submit" value="Go!">
+    </form>
+
+    </body>
+</html>
+<form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+
+</body>
+</html>
