@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2 style="color:red">{{ title }}</h2>
+
+            <form action="/start" method="post">
+
+                <input type="radio" name="role" value="Admin" />
+	           <label for="admin">Admin</label><br>
+	           <input type="radio" name="role" value="User" />
+	           <label for="user">User</label><br>
+
+                 <input type="submit" value="Submit">
+            </form>
+
+        <p>Please select one and click the "Submit" button to login with credentials.</p>
+
+    </body>
+</html>
