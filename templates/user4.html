@@ -1,0 +1,21 @@
+<html>
+    <head>
+       <title>{{ title }}</title>
+    </head>
+    <body>
+	    <h2>{{ title }}</h2>
+
+            <form action="/displayjon" method="post">
+
+                   {% for name in name: %}
+	           <input type="radio" name="Headache" value="{{ name }}" /> {{ name }} <br>
+    	           {% endfor %}
+
+                 <input type="submit" value="Display Headache">
+            </form>
+            <form>
+                <input type="button" value="Go back!" onclick="history.go(-1)">
+            </form>
+
+    </body>
+</html>
