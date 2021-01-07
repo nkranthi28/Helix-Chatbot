@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+    <h2 style="color:red">CSCI 485 Intelligent Chatbot User Login Page Tutorial</h2>
+
+	<form action="/patient">
+	  <label for="uname">Username</label>
+	    <input type="text" id="uname" name="uname" value=""><br>
+	    <p></p>
+          <label for="passwd">Password</label>
+	    <input type="password" id="passwd" name="passwd" value=""><br><br>
+	    <div class="Atag">
+	    <input type="submit" value="Login">
+	</form>
+
+	<p>Complete cerdentials and click the "Submit" button to login.</p>
+    </div>
+    <form>
+            <input type="button" value="Go back!" onclick="history.go(-1)">
+        </form>
+    </body>
+</html>
